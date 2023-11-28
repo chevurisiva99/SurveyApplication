@@ -33,7 +33,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 script {
-                    sh "kubectl --context=hw2-rancher-cluster -n default set image deployment/workload1 container-0=sivachevuri22/springapp:${TIMESTAMP}"
+                    sh "kubectl --context=hw3cluster -n default set image deployment/hw3deployment container-0=sivachevuri22/springapp:${TIMESTAMP}"
                 }
             }
         }
